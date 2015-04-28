@@ -448,7 +448,8 @@ if($Type == 'Movies') {
         SELECT
             ID
         FROM torrents_group
-        WHERE Name = '".$Properties['Title']."'");
+        WHERE Name = '".$Properties['Title']."'
+        AND Year = '".$Properties['Year']."'");
     if($DB->has_results()) {
         list($GroupID) = $DB->next_record();
     }
